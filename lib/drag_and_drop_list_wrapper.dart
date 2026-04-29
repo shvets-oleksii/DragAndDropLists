@@ -162,7 +162,7 @@ class _DragAndDropListWrapper extends State<DragAndDropListWrapper>
           child: DragTarget<DragAndDropListInterface>(
             builder: (context, candidateData, rejectedData) {
               if (candidateData.isNotEmpty) {}
-              return Container();
+              return IgnorePointer(child: Container());
             },
             onWillAcceptWithDetails: (details) {
               bool accept = true;

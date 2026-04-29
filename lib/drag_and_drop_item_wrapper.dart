@@ -210,7 +210,7 @@ class _DragAndDropItemWrapper extends State<DragAndDropItemWrapper>
           child: DragTarget<DragAndDropItem>(
             builder: (context, candidateData, rejectedData) {
               if (candidateData.isNotEmpty) {}
-              return Container();
+              return IgnorePointer(child: Container());
             },
             onWillAcceptWithDetails: (details) {
               bool accept = true;
