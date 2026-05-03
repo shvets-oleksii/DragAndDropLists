@@ -200,8 +200,12 @@ class _DragAndDropItemWrapper extends State<DragAndDropItemWrapper>
             ),
             Listener(
               onPointerMove: _onPointerMove,
-              onPointerDown: widget.parameters!.onPointerDown,
-              onPointerUp: widget.parameters!.onPointerUp,
+              onPointerDown: widget.child.canDrag
+                  ? widget.parameters!.onPointerDown
+                  : null,
+              onPointerUp: widget.child.canDrag
+                  ? widget.parameters!.onPointerUp
+                  : null,
               child: draggable,
             ),
           ],

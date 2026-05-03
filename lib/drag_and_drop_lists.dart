@@ -739,8 +739,8 @@ class DragAndDropListsState extends State<DragAndDropLists> {
 
       if (newOffset != null) {
         _scrolling = true;
-        await _scrollController!.animateTo(newOffset,
-            duration: Duration(milliseconds: _duration), curve: Curves.linear);
+        // await _scrollController!.animateTo(newOffset,
+        //     duration: Duration(milliseconds: _duration), curve: Curves.linear);
         _scrolling = false;
         if (_pointerDown) _scrollList();
       }
