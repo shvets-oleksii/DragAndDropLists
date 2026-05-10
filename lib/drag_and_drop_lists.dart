@@ -754,7 +754,7 @@ class DragAndDropListsState extends State<DragAndDropLists> {
 
     var pointerYPosition = _pointerYPosition;
     var scrollController = _scrollController;
-    if (scrollController != null && pointerYPosition != null) {
+    if (scrollController != null && scrollController.hasClients && pointerYPosition != null) {
       if (pointerYPosition < (top + _scrollAreaSize) &&
           scrollController.position.pixels >
               scrollController.position.minScrollExtent) {
